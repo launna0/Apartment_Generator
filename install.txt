@@ -1,0 +1,35 @@
+The commands needed to run our program are as follows 
+
+to compile: g++ -Wall -Wextra -pedantic -std=c++17 -g main.cpp algorithms.cpp display.cpp features.cpp Matrix.cpp -o main.exe -lsfml-graphics -lsfml-window -lsfml-system
+to run: ./main.exe
+
+
+- The operating system that was used for this project was WSL: Ubuntu 22.04.1
+- The only dependency needed for this project is SFML 
+
+Directions: 
+
+Once the program is compiled and run, the command line will prompt you for different inputs which will eventually lead
+to the program printing out a result that is either an apartment layout or a message telling you why your
+requested layout is not possible. It may take around 10-20 seconds for the user to get the result back (make take longer
+if there is a large amount of rooms or a really big layout). If an apartment is able to be created by an algorithm then 
+a SFML window should pop up and allow you to view a drawing of the apartment layout. There will be a key printed in the 
+terminal to show which colors represent which rooms. Once this is finished, if you want to try out another layout simply 
+close the SFML window and re compile the code. 
+
+** It is recommended to set the initital room size to 60 by 40 and to go up in small increments if rooms do not fit **
+
+
+Additional commands to run tests
+
+Algorithm tests
+to compile: g++ -Wall -Wextra -pedantic -std=c++17 -g algorithms.cpp features.cpp Matrix.cpp algorithm_tests.cpp -o a_tests
+to run: ./a_tests
+
+Matrix tests
+to compile: g++ -Wall -Wextra -pedantic -std=c++17 -g Matrix.cpp Matrix_tests.cpp -o m_tests
+to run: ./m_tests
+
+feature tests
+to compile: g++ -Wall -Wextra -pedantic -std=c++17 features.cpp features_test.cpp -o f_tests
+to run: ./f_tests
